@@ -1,7 +1,7 @@
 {
     "AUTHOR" : "Demondude",
     "INSTALL_MSG" : "Thanks for using my cogs. If you have any troubles with it, just ask Demondude\n#2261.",
-    "NAME" : "The class name of the cog, MUST BE matching, including capitalization",
+    "NAME" : "rmeme",
     "SHORT" : "Posts memes from a api",
     "DESCRIPTION" : "Posts memes from a api https://meme-api.herokuapp.com/",
     "TAGS" : ["meme", "fun", "cool"],
