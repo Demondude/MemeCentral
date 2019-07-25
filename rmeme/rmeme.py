@@ -1,16 +1,11 @@
 import discord
-from discord.ext import commands
+from redbot.core import commands
 import urllib.request, json
 
-class rmeme:
-
-    """My custom cog that does stuff!"""
-
-    def __init__(self, bot):
-        self.bot = bot
+class rmeme(commands.Cog):
 
     @commands.command()
-    async def rmeme(self):
+    async def rmeme(self, ctx):
         """This does stuff!"""
         with urllib.request.urlopen("https://meme-api.herokuapp.com/gimme") as url:
             data = json.loads(url.read().decode())
@@ -26,7 +21,7 @@ class rmeme:
         )
         embed.set_image(url=url)
         embed.set_footer(text=post_link)
-        await self.bot.say(embed)
+        await ctx.say(embed)
 
 
 def setup(bot):
