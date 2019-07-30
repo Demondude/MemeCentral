@@ -1,10 +1,8 @@
 {
-    "AUTHOR" : "Demondude",
-    "INSTALL_MSG" : "Thanks for using my cogs. If you have any troubles with it, just ask Demondude\n#2261.",
-    "NAME" : "rmeme",
-    "SHORT" : "Posts memes from a api",
-    "DESCRIPTION" : "Posts memes from a api https://meme-api.herokuapp.com/",
-    "TAGS" : ["meme", "fun", "cool"],
-    "REQUIREMENTS" : [],
-    "HIDDEN" : false
+    "author" : "Demondude",
+    "install_msg" : "Thanks for using my cogs. If you have any troubles with it, just ask Demondude\n#2261.",
+    "name" : "rmeme",
+    "short" : "Posts memes from a api",
+    "description" : "Posts memes from a api https://meme-api.herokuapp.com/",
+    "tags" : ["meme", "fun", "cool"]
 }
