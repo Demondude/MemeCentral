@@ -6,7 +6,6 @@ class rmeme(commands.Cog):
 
     @commands.command()
     async def rmeme(self, ctx):
-        """This does stuff!"""
         with urllib.request.urlopen("https://meme-api.herokuapp.com/gimme") as url:
             data = json.loads(url.read().decode())
             title = data["title"]
@@ -21,8 +20,7 @@ class rmeme(commands.Cog):
         )
         embed.set_image(url=url)
         embed.set_footer(text=post_link)
-        await ctx.say(embed)
-
+        await ctx.send(embed=embed)
 
 def setup(bot):
     bot.add_cog(rmeme(bot))
