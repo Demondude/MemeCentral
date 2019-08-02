@@ -1,0 +1,8 @@
+{
+    "author" : "Demondude",
+    "install_msg" : "Thanks for using my cogs. If you have any troubles with it, just ask Demondude\n#2261.",
+    "name" : "EventManager",
+    "short" : "An event manager for discord servers",
+    "description" : "An event manager for discord servers. Helps you with events with set time.",
+    "tags" : ["fun", "cool","mod","moderation","events"]
+}
