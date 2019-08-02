@@ -1,8 +1,12 @@
 import discord
 from redbot.core import commands
+from redbot.core.bot import Red
 
 
 class EventManager(commands.Cog):
+
+    def __init__(self, bot: Red):
+        self.bot = bot
 
     @commands.command(pass_context=True)
     async def Event(self, ctx):
