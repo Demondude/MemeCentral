@@ -29,8 +29,7 @@ class Hentai(commands.Cog):
     @commands.command()
     async def hentailist(self,ctx):
         """Lists all the hentai tags"""
-        await ctx.send("Full list here:")
-        await ctx.send("""```feet, yuri, trap, futanari, hololewd, lewdkemo,
+        await ctx.send("Full list here:" + """```feet, yuri, trap, futanari, hololewd, lewdkemo,
 solog, feetg, cum, erokemo, les, wallpaper, lewdk,
 ngif, meow, tickle, lewd, feed, gecg, eroyuri, eron,
 cum_jpg, bj, nsfw_neko_gif, solo, kemonomimi, nsfw_avatar,
