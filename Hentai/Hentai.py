@@ -29,69 +29,16 @@ class Hentai(commands.Cog):
     @commands.command()
     async def hentailist(self,ctx):
         """Lists all the hentai tags"""
-        embed = discord.Embed(title="All the hentai you want.", description="""feet
-                                                                                yuri
-                                                                                trap
-                                                                                futanari
-                                                                                hololewd
-                                                                                lewdkemo
-                                                                                solog
-                                                                                feetg
-                                                                                cum
-                                                                                erokemo
-                                                                                les
-                                                                                wallpaper
-                                                                                lewdk
-                                                                                ngif
-                                                                                meow
-                                                                                tickle
-                                                                                lewd
-                                                                                feed
-                                                                                gecg
-                                                                                eroyuri
-                                                                                eron
-                                                                                cum_jpg
-                                                                                bj
-                                                                                nsfw_neko_gif
-                                                                                solo
-                                                                                kemonomimi
-                                                                                nsfw_avatar
-                                                                                gasm
-                                                                                poke
-                                                                                anal
-                                                                                slap
-                                                                                    """, color=await ctx.embed_color())
-        embed2 = discord.Embed(title="Part 2", description="""hentai
-                                                            avatar
-                                                            erofeet
-                                                            holo
-                                                            keta
-                                                            blowjob
-                                                            pussy
-                                                            tits
-                                                            holoero
-                                                            lizard
-                                                            pussy_jpg
-                                                            pwankg
-                                                            classic
-                                                            kuni
-                                                            waifu
-                                                            pat
-                                                            kiss
-                                                            femdom
-                                                            neko
-                                                            spank
-                                                            cuddle
-                                                            erok
-                                                            fox_girl
-                                                            boobs
-                                                            random_hentai_gif
-                                                            smallboobs
-                                                            hug
-                                                            ero
-                                                            """, color=await ctx.embed_color())
-        await ctx.send(embed=embed)
-        await ctx.send(embed=embed2)
+        await ctx.send("Full list here:")
+        await ctx.send("""```feet, yuri, trap, futanari, hololewd, lewdkemo,
+solog, feetg, cum, erokemo, les, wallpaper, lewdk,
+ngif, meow, tickle, lewd, feed, gecg, eroyuri, eron,
+cum_jpg, bj, nsfw_neko_gif, solo, kemonomimi, nsfw_avatar,
+gasm, poke, anal, slap, hentai, avatar, erofeet, holo,
+keta, blowjob, pussy, tits, holoero, lizard, pussy_jpg,
+pwankg, classic, kuni, waifu, pat, kiss, femdom,
+neko, spank, cuddle, erok, fox_girl, boobs, random_hentai_gif,
+smallboobs, hug, ero```""")
 
 
 def setup(bot):
