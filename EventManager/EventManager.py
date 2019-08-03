@@ -4,10 +4,6 @@ from redbot.core import commands
 
 class EventManager(commands.Cog):
 
-    def __init__(self, bot):
-        super().__init__()
-        self.bot = bot
-
     @commands.command(pass_context=True)
     async def event(self, ctx):
 
@@ -15,8 +11,8 @@ class EventManager(commands.Cog):
             return msg.author == ctx.author
 
         await ctx.send("Enter a quick description of the event.")
-        description_event = await self.bot.wait_for("message", check=user_check)
-        await ctx.send(description_event)
+        description_event = await ctx.bot.wait_for("message", check=user_check)
+        await ctx.send(description_event.content)
 
 
 def setup(bot):
