@@ -12,13 +12,13 @@ class EventManager(commands.Cog):
     @commands.command(pass_context=True)
     async def event(self, ctx):
         await ctx.send("Enter name of the event.")
-        name_event = self.bot.wait_for_message(author=ctx.message.author, timeout=30)
+        name_event = await self.bot.wait_for_message(author=ctx.message.author, timeout=30)
         await ctx.send("Enter a quick description of the event.")
-        description_event = self.bot.wait_for_message(author=ctx.message.author, timeout=30)
+        description_event = await self.bot.wait_for_message(author=ctx.message.author, timeout=30)
         await ctx.send("Enter the date of the event example (yyyy/mm/dd).")
-        date_event = self.bot.wait_for_message(author=ctx.message.author, timeout=30)
+        date_event = await self.bot.wait_for_message(author=ctx.message.author, timeout=30)
         await ctx.send("Enter the time of the event example (00:00). The time should be Coordinated Universal Time (UTC).")
-        time_event = self.bot.wait_for_message(author=ctx.message.author, timeout=30)
+        time_event = await self.bot.wait_for_message(author=ctx.message.author, timeout=30)
 
         embed = discord.Embed(title=name_event, description=description_event, color=0xf2ff00)
         embed.add_field(name="Time", value=time_event, inline = True)
@@ -27,7 +27,7 @@ class EventManager(commands.Cog):
         await ctx.send(embed=embed)
 
         await ctx.send("It looks like this. Should we post this ? (y/n).")
-        confirmation_event = self.bot.wait_for_message(author=ctx.message.author, timeout=30)
+        confirmation_event = await self.bot.wait_for_message(author=ctx.message.author, timeout=30)
         await ctx.send(confirmation_event)
 
 
