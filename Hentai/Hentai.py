@@ -7,6 +7,7 @@ from redbot.core import commands
 
 
 class Hentai(commands.Cog):
+    @commands.is_nsfw()
     @commands.command(autohelp=True, usage="<Hentai tag>")
     async def hentai(self, ctx, tag: str):
         """
@@ -28,7 +29,7 @@ class Hentai(commands.Cog):
                 url = nekos.img(tag)
             except nekos.errors.InvalidArgument:
                 await ctx.send("That tag does not exist. try typing .hentai")
-
+                return
             embed = discord.Embed(
                 color=await ctx.embed_color()
             )
