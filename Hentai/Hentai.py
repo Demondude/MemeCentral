@@ -61,7 +61,6 @@ class Hentai(commands.Cog):
                                                                                 anal
                                                                                 slap
                                                                                     """, color=await ctx.embed_color())
-        await ctx.say(embed=embed)
         embed2 = discord.Embed(title="Part 2", description="""hentai
                                                             avatar
                                                             erofeet
