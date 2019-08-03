@@ -6,6 +6,7 @@ from redbot.core.bot import Red
 class EventManager(commands.Cog):
 
     def __init__(self, bot: Red):
+        super().__init__()
         self.bot = bot
 
     @commands.command(pass_context=True)
