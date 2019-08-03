@@ -3,19 +3,14 @@ import nekos
 from redbot.core import commands
 
 
-
-
-
 class Hentai(commands.Cog):
-    @commands.is_nsfw()
+
     @commands.command(autohelp=True, usage="<Hentai tag>")
     async def hentai(self, ctx, tag: str):
         """
         All the hentai i can give you. Check the list at 'hentailist'.
         """
         if ctx.channel.is_nsfw():
-            ctx.send("Wrong channel. Go to nsfw")
-        else:
             try:
                 url = nekos.img(tag)
             except nekos.errors.InvalidArgument:
@@ -28,6 +23,8 @@ class Hentai(commands.Cog):
             embed.set_image(url=url)
             embed.set_footer(text="Thanks Nekos-life!")
             await ctx.send(embed=embed)
+        else:
+            ctx.send("Wrong channel. Go to nsfw")
 
     @commands.command()
     async def hentailist(self,ctx):
@@ -94,7 +91,9 @@ class Hentai(commands.Cog):
                                                             hug
                                                             ero
                                                             """, color=await ctx.embed_color())
-        await ctx.say(embed=embed)
-        await ctx.say(embed=embed2)
+        await ctx.send(embed=embed)
+        await ctx.send(embed=embed2)
+
+
 def setup(bot):
     bot.add_cog(Hentai(bot))
