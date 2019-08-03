@@ -19,9 +19,9 @@ class EventManager(commands.Cog):
         await ctx.send("Enter the time of the event example (00:00). The time should be Coordinated Universal Time (UTC).")
         time_event = await ctx.bot.wait_for("message", check=user_check)
 
-        embed = discord.Embed(title=name_event, description=description_event, color=0xf2ff00)
-        embed.add_field(name="Time", value=time_event, inline=True)
-        embed.add_field(name="Date", value=date_event, inline=True)
+        embed = discord.Embed(title=name_event.content, description=description_event.content, color=0xf2ff00)
+        embed.add_field(name="Time", value=time_event.content, inline=True)
+        embed.add_field(name="Date", value=date_event.content, inline=True)
         embed.set_footer(text="You should get a notification when the event starts.")
         await ctx.send(embed=embed)
 
