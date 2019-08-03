@@ -3,13 +3,7 @@ import nekos
 from redbot.core import commands
 
 
-def build_embed(url, color):
-    embed = discord.Embed(
-        color=color
-    )
-    embed.set_image(url=url)
-    embed.set_footer(text="Thanks Nekos-life!")
-    return embed
+
 
 
 class Hentai(commands.Cog):
@@ -26,10 +20,16 @@ class Hentai(commands.Cog):
         smallboobs, hug, ero
         """
         try:
-            await ctx.send(embed=build_embed(nekos.img(tag), await ctx.embed_color()))
+            url = nekos.img(tag)
         except nekos.errors.InvalidArgument:
             await ctx.send("That tag does not exist. try typing .hentai")
 
+        embed = discord.Embed(
+            color=await ctx.embed_color()
+        )
+        embed.set_image(url=url)
+        embed.set_footer(text="Thanks Nekos-life!")
+        await ctx.send(embed=embed)
 
 def setup(bot):
     bot.add_cog(Hentai(bot))
