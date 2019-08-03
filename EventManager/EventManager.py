@@ -1,11 +1,10 @@
 import discord
 from redbot.core import commands
-from redbot.core.bot import Red
 
 
 class EventManager(commands.Cog):
 
-    def __init__(self, bot: Red):
+    def __init__(self, bot):
         super().__init__()
         self.bot = bot
 
