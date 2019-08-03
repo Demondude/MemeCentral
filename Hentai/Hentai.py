@@ -10,20 +10,24 @@ def build_embed(url, color):
     embed.set_footer(text="Thanks Nekos-life!")
 
 class Hentai(commands.Cog):
-    @commands.group()
+    @commands.group(autohelp=True)
     async def hentai(self):
+        """All the hentai i can give you."""
         pass
 
-    @hentai.command()
+    @hentai.command(name="feet")
     async def feet(self, ctx):
+        """Feet pictures."""
         await ctx.send(embed=build_embed(nekos.img("feet"), await ctx.embed_color()))
 
-    @hentai.command()
+    @hentai.command(name="yuri")
     async def yuri(self, ctx):
+        """Yuri pictures."""
         await ctx.send(embed=build_embed(nekos.img("yuri"), await ctx.embed_color()))
 
-    @hentai.command()
+    @hentai.commandname(name="trap")
     async def trap(self, ctx):
+        """trap pictures."""
         await ctx.send(embed=build_embed(nekos.img("trap"), await ctx.embed_color()))
 
 def setup(bot):
