@@ -4,6 +4,5 @@
     "name" : "Hentai",
     "short" : "Posts lewd stuff.",
     "description" : "Posts lewd stuff in nsfw channels.",
-    "tags" : ["nsfw"],
-    "requirements" : ["requests"]
+    "tags" : ["nsfw"]
 }
