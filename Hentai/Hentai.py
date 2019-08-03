@@ -25,7 +25,7 @@ class Hentai(commands.Cog):
         """Yuri pictures."""
         await ctx.send(embed=build_embed(nekos.img("yuri"), await ctx.embed_color()))
 
-    @hentai.commandname(name="trap")
+    @hentai.command(name="trap")
     async def trap(self, ctx):
         """trap pictures."""
         await ctx.send(embed=build_embed(nekos.img("trap"), await ctx.embed_color()))
