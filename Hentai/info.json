@@ -1,9 +1,0 @@
-{
-    "author" : "Demondude",
-    "install_msg" : "Thanks for using my cogs. If you have any troubles with it, just ask Demondude\n#2261. For this cog you will need to install this 'pip install -U https://github.com/Nekos-life/nekos.py/archive/master.zip'. Thanks to https://nekos.life/ for the neko stuff",
-    "name" : "Hentai",
-    "short" : "Posts lewd stuff.",
-    "description" : "Posts lewd stuff in nsfw channels.",
-    "tags" : ["nsfw"],
-    "requirements" : ["requests"]
-}
